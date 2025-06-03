@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday Rithika</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffe3ec, #ffffff);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #e75480;
+    }
+    input, button {
+      font-size: 1.2rem;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 10px;
+      border: 1px solid #e75480;
+      text-align: center;
+    }
+    button {
+      background-color: #e75480;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+    .hint {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday Rithika</h1>
+  <input type="password" id="password" placeholder="Enter the password" />
+  <button onclick="checkPassword()">Enter</button>
+  <div class="hint">(Hint: happybaby05 — v hard don't use this)</div>
+  <div class="error" id="errorMsg"></div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById('password').value;
+      if (password === 'happybaby05') {
+        window.location.href = 'quiz.html';
+      } else {
+        document.getElementById('errorMsg').textContent = 'Wrong password 😤';
+      }
+    }
+  </script>
+</body>
+</html>
